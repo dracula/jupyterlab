@@ -15,7 +15,7 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 
 |[![Constantine Karos](https://avatars1.githubusercontent.com/u/36245370?s=460&v=4)](https://github.com/karosc)|
 
-|--- |
+|----------------------------------------------------------|
 |[Constantine Karos](https://github.com/karosc)|
 
 ## License
