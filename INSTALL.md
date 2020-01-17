@@ -1,6 +1,6 @@
 ### [JupyterLab](https://jupyter.org/)
 
-#### Install 
+#### Install
 ```bash
 jupyter labextension install @karosc/jupyterlab_dracula
 ```
