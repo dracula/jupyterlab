@@ -13,7 +13,7 @@ import {
  * A plugin for the Dracula
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab_dracula:plugin',
+  id: '@karosc/jupyterlab_dracula:plugin',
   requires: [IThemeManager],
   activate: function(app: JupyterFrontEnd, manager: IThemeManager) {
     const style = '@karosc/jupyterlab_dracula/index.css';
