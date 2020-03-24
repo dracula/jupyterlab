@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "composite": true,
@@ -12,14 +11,16 @@
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
+    "outDir": "lib",
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
+    "rootDir": "src",
     "sourceMap": true,
-    "strictNullChecks": true,
+    "strict": true,
     "target": "es2017",
-    "types": [],
-    "outDir": "lib",
-    "rootDir": "src"
+    "types": []
   },
-  "include": ["src/*"]
+  "include": [
+    "src/*"
+  ]
 }
