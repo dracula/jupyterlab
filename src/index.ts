@@ -1,25 +1,35 @@
+// Copyright (c) Jupyter Development Team.
+// Distributed under the terms of the Modified BSD License.
+/**
+ * @packageDocumentation
+ * @module JLDracula
+ */
 
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
-import {
-  IThemeManager
-} from '@jupyterlab/apputils';
+import { IThemeManager } from '@jupyterlab/apputils';
 
+import { ITranslator } from '@jupyterlab/translation';
 
 /**
- * A plugin for the Dracula
+ * A plugin for the Jupyter Light Theme.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: '@karosc/jupyterlab_dracula:plugin',
-  requires: [IThemeManager],
-  activate: function(app: JupyterFrontEnd, manager: IThemeManager) {
-    const style = '@karosc/jupyterlab_dracula/index.css';
-
+  id: 'JLDracula:plugin',
+  requires: [IThemeManager, ITranslator],
+  activate: (
+    app: JupyterFrontEnd,
+    manager: IThemeManager,
+    translator: ITranslator
+  ) => {
+    const trans = translator.load('jupyterlab');
+    const style = 'JLDracula/index.css';
     manager.register({
-      name: 'Dracula',
+      name: 'JLDracula',
+      displayName: trans.__('JLDracula'),
       isLight: false,
       themeScrollbars: true,
       load: () => manager.loadCSS(style),
@@ -28,6 +38,5 @@ const plugin: JupyterFrontEndPlugin<void> = {
   },
   autoStart: true
 };
-
 
 export default plugin;
