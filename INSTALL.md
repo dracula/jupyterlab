@@ -2,6 +2,12 @@
 
 #### Install
 ```bash
-jupyter labextension install @karosc/jupyterlab_dracula
+pip install JLDracula
+```
+
+#### Uninstall
+
+```bash
+pip uninstall JLDracula
 ```
 
